@@ -1,3 +1,5 @@
+import {Observable} from 'rxjs';
+
 export interface AuthService {
 
   /**
@@ -20,7 +22,7 @@ export interface AuthService {
    * @param username a valid user id
    * @param password a valid password
    */
-  login(username: string, password: string): void;
+  login(username: string, password: string): Observable<any>;
 
   /**
    * Logout from the app
