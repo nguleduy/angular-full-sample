@@ -7,15 +7,11 @@ import {TranslateLoader, TranslateModule, TranslateService} from 'ng2-translate'
 import {Http} from '@angular/http';
 import {TranslateLoaderFactory} from './core/utils/app.translate.factory';
 import {CoreModule} from './core/core.module';
-import {LoginComponent} from './shared/login/login.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import { ControlMessagesComponent } from './shared/control-messages/control-messages.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    ControlMessagesComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +22,7 @@ import { ControlMessagesComponent } from './shared/control-messages/control-mess
       deps: [Http]
     }),
     CoreModule,
-    ReactiveFormsModule
+    SharedModule
   ],
   providers: [TranslateService],
   bootstrap: [AppComponent]
