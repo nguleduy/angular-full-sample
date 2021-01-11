@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {LoginComponent} from './login/login.component';
 import {ControlMessagesComponent} from './control-messages/control-messages.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   imports: [
@@ -10,14 +11,15 @@ import {ControlMessagesComponent} from './control-messages/control-messages.comp
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [LoginComponent, ControlMessagesComponent],
+  declarations: [LoginComponent, ControlMessagesComponent, NotFoundComponent],
   providers: [],
   exports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     LoginComponent,
-    ControlMessagesComponent
+    ControlMessagesComponent,
+    NotFoundComponent
   ]
 })
 export class SharedModule {
